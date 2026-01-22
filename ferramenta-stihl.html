@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIHL - Potência e Precisão em Suas Mãos</title>
+
+    <!-- Squeleton CSS -->
+    <link rel="stylesheet" href="https://cdn.hiperwp.com.br/squeleton.v4.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Squeleton JavaScript (Head) -->
+    <script src="https://cdn.hiperwp.com.br/squeleton-main.v4.min.js"></script>
+
+    <style>
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        :root {
+            --stihl-orange: #FF6600;
+            --stihl-orange-dark: #E55A00;
+            --stihl-black: #000000;
+            --stihl-white: #FFFFFF;
+            --stihl-gray-dark: #1a1a1a;
+            --stihl-gray: #2a2a2a;
+            --stihl-gray-medium: #666666;
+            --stihl-gray-light: #f8f9fa;
+            --stihl-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            --stihl-shadow-hover: 0 30px 80px rgba(0,0,0,0.25);
+        }
+
+        body {
+            background: var(--stihl-white);
+            color: var(--stihl-black);
+            overflow-x: hidden;
+        }
+
+        /* Header Premium */
+        .header-premium {
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,102,0,0.1);
+        }
+
+        .logo-premium {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--stihl-orange);
+            letter-spacing: 4px;
+            text-shadow: 0 0 30px rgba(255,102,0,0.3);
+        }
+
+        .nav-premium {
+            color: var(--stihl-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 12px 0;
+            border-bottom: 2px solid transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-premium:hover {
+            color: var(--stihl-orange);
+            border-bottom-color: var(--stihl-orange);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Premium com Background */
+        .hero-premium {
+            background: linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(42,42,42,0.88) 100%),
+                        url('https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1920&q=80') center/cover;
+            min-height: 90vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-premium::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,102,0,0.15) 0%, transparent 70%);
+            animation: pulse-glow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-title-premium {
+            font-size: clamp(48px, 8vw, 72px);
+            font-weight: 900;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--stihl-orange) 60%, #FF8533 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+            margin-bottom: 30px;
+        }
+
+        .hero-subtitle-premium {
+            font-size: clamp(18px, 3vw, 24px);
+            color: rgba(255,255,255,0.85);
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* Botões Premium */
+        .btn-premium-primary {
+            background: linear-gradient(135deg, var(--stihl-orange) 0%, var(--stihl-orange-dark) 100%);
+            color: var(--stihl-white);
+            padding: 20px 50px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 15px 40px rgba(255,102,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-premium-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-premium-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-premium-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(255,102,0,0.6);
+        }
+
+        .btn-premium-secondary {
+            background: transparent;
+            color: var(--stihl-white);
+            padding: 20px 50px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--stihl-white);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .btn-premium-secondary:hover {
+            background: var(--stihl-white);
+            color: var(--stihl-black);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(255,255,255,0.3);
+        }
+
+        /* Stats Premium */
+        .stats-premium {
+            background: linear-gradient(135deg, var(--stihl-orange) 0%, var(--stihl-orange-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 1;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--stihl-white);
+        }
+
+        .stat-label {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.9);
+            margin-top: 15px;
+        }
+
+        /* Section Premium */
+        .section-premium {
+            padding: 120px 0;
+        }
+
+        .section-title-premium {
+            font-size: clamp(36px, 6vw, 56px);
+            font-weight: 900;
+            color: var(--stihl-black);
+            position: relative;
+            display: inline-block;
+            letter-spacing: -1px;
+        }
+
+        .section-title-premium::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--stihl-orange) 0%, transparent 100%);
+            border-radius: 3px;
+        }
+
+        .section-subtitle-premium {
+            font-size: 20px;
+            color: var(--stihl-gray-medium);
+            font-weight: 400;
+            margin-top: 30px;
+        }
+
+        /* Benefit Card Premium */
+        .benefit-premium {
+            background: var(--stihl-white);
+            border-radius: 30px;
+            padding: 50px 40px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #f0f0f0;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,102,0,0.03) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .benefit-premium:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-premium:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--stihl-shadow-hover);
+            border-color: var(--stihl-orange);
+        }
+
+        .benefit-icon-premium {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--stihl-orange) 0%, #FF8533 100%);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: var(--stihl-white);
+            margin: 0 auto 35px;
+            box-shadow: 0 15px 40px rgba(255,102,0,0.3);
+            transition: all 0.4s ease;
+        }
+
+        .benefit-premium:hover .benefit-icon-premium {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 20px 50px rgba(255,102,0,0.5);
+        }
+
+        .benefit-title-premium {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--stihl-black);
+            margin-bottom: 20px;
+        }
+
+        .benefit-text-premium {
+            font-size: 16px;
+            color: var(--stihl-gray-medium);
+            line-height: 1.8;
+        }
+
+        /* Product Card Premium */
+        .product-premium {
+            background: var(--stihl-white);
+            border-radius: 30px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #f0f0f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-premium:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: var(--stihl-shadow-hover);
+            border-color: var(--stihl-orange);
+        }
+
+        .product-image-premium {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            transition: all 0.4s ease;
+        }
+
+        .product-premium:hover .product-image-premium {
+            transform: scale(1.05);
+        }
+
+        .product-content-premium {
+            padding: 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-category-premium {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--stihl-orange);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .product-title-premium {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--stihl-black);
+            margin-bottom: 15px;
+        }
+
+        .product-description-premium {
+            font-size: 15px;
+            color: var(--stihl-gray-medium);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .product-price-premium {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--stihl-orange);
+            margin-bottom: 25px;
+        }
+
+        .btn-buy-premium {
+            background: var(--stihl-black);
+            color: var(--stihl-white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid var(--stihl-black);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-buy-premium:hover {
+            background: var(--stihl-orange);
+            border-color: var(--stihl-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,102,0,0.4);
+        }
+
+        /* Testimonials Premium */
+        .testimonials-premium {
+            background: var(--stihl-gray-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-premium::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,102,0,0.1) 0%, transparent 70%);
+        }
+
+        .testimonial-premium {
+            background: var(--stihl-gray);
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            border: 2px solid rgba(255,102,0,0.2);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .testimonial-premium:hover {
+            border-color: var(--stihl-orange);
+            transform: translateY(-10px);
+        }
+
+        .testimonial-text-premium {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author-premium {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--stihl-orange);
+            margin-bottom: 8px;
+        }
+
+        .testimonial-position-premium {
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* CTA Premium */
+        .cta-premium {
+            background: linear-gradient(135deg, var(--stihl-black) 0%, var(--stihl-gray-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-premium::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,102,0,0.15) 0%, transparent 70%);
+        }
+
+        /* Footer Premium */
+        .footer-premium {
+            background: var(--stihl-black);
+            border-top: 3px solid var(--stihl-orange);
+        }
+
+        .footer-title-premium {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--stihl-orange);
+            margin-bottom: 25px;
+        }
+
+        .footer-link-premium {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+
+        .footer-link-premium:hover {
+            color: var(--stihl-orange);
+            padding-left: 8px;
+        }
+
+        .social-premium {
+            width: 50px;
+            height: 50px;
+            background: var(--stihl-gray);
+            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--stihl-white);
+            font-size: 22px;
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+
+        .social-premium:hover {
+            background: var(--stihl-orange);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255,102,0,0.4);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-premium {
+            background: var(--stihl-orange);
+            border: none;
+            color: var(--stihl-white);
+            font-size: 24px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-premium:hover {
+            background: var(--stihl-orange-dark);
+            transform: scale(1.05);
+        }
+
+        /* Modal Premium */
+        .modal-premium {
+            background: var(--stihl-white);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .dialog-close {
+            background: var(--stihl-orange);
+            color: var(--stihl-white);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 26px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dialog-close:hover {
+            background: var(--stihl-black);
+            transform: rotate(90deg);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 50px;
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            padding-top: 8px;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator::before {
+            content: '';
+            width: 6px;
+            height: 10px;
+            background: var(--stihl-orange);
+            border-radius: 3px;
+            animation: scroll-down 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes scroll-down {
+            0% { transform: translateY(0); opacity: 0; }
+            40% { opacity: 1; }
+            80% { transform: translateY(15px); opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .hero-title-premium { font-size: 42px; }
+            .section-premium { padding: 80px 0; }
+            .stat-number { font-size: 48px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Premium -->
+    <header class="header-premium">
+        <div class="container">
+            <div class="d-flex f-items-center f-justify-between p-25px-tb">
+                <div class="logo-premium">STIHL</div>
+                <nav class="d-flex f-gap-35 sm-d-none">
+                    <a href="#inicio" class="nav-premium">Início</a>
+                    <a href="#beneficios" class="nav-premium">Benefícios</a>
+                    <a href="#produtos" class="nav-premium">Produtos</a>
+                    <a href="#depoimentos" class="nav-premium">Depoimentos</a>
+                    <a href="#contato" class="nav-premium">Contato</a>
+                </nav>
+                <button class="mobile-menu-premium md-d-block lg-d-none" data-modal-show="menu-modal">
+                    <span class="iccon-menu-1"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Premium -->
+    <section id="inicio" class="hero-premium f-items-center f-justify-center ps-relative">
+        <div class="container ps-relative" style="z-index: 2;">
+            <div class="row f-items-center">
+                <div class="c-xs-12 c-md-7">
+                    <div class="wow fadeInLeft" data-wow-delay="0.2s">
+                        <h1 class="hero-title-premium">Potência e Precisão em Suas Mãos</h1>
+                        <p class="hero-subtitle-premium m-40px-b">Ferramentas profissionais STIHL: tecnologia alemã para resultados superiores em jardinagem, silvicultura e construção.</p>
+                        <div class="d-flex f-gap-20 f-wrap">
+                            <a href="#produtos" class="btn-premium-primary">
+                                <span>Ver Produtos</span>
+                                <span class="iccon-arrow-right-1"></span>
+                            </a>
+                            <a href="#beneficios" class="btn-premium-secondary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator xs-d-none"></div>
+    </section>
+
+    <!-- Stats Premium -->
+    <section class="stats-premium p-80px-tb xs-p-50px-tb ps-relative">
+        <div class="container ps-relative" style="z-index: 2;">
+            <div class="row gap-20">
+                <div class="c-xs-12 c-sm-6 c-md-3">
+                    <div class="stat-card text-center wow bounceIn" data-wow-delay="0.1s">
+                        <div class="stat-number counter" data-target="95">0</div>
+                        <div class="stat-label">Anos de Tradição</div>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-3">
+                    <div class="stat-card text-center wow bounceIn" data-wow-delay="0.2s">
+                        <div class="stat-number counter" data-target="160">0</div>
+                        <div class="stat-label">Países Atendidos</div>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-3">
+                    <div class="stat-card text-center wow bounceIn" data-wow-delay="0.3s">
+                        <div class="stat-number counter" data-target="18000">0</div>
+                        <div class="stat-label">Funcionários</div>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-3">
+                    <div class="stat-card text-center wow bounceIn" data-wow-delay="0.4s">
+                        <div class="stat-number counter" data-target="1000">0</div>
+                        <div class="stat-label">Produtos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Premium -->
+    <section id="beneficios" class="section-premium" style="background: var(--stihl-gray-light);">
+        <div class="container">
+            <div class="text-center m-80px-b xs-m-50px-b">
+                <h2 class="section-title-premium wow fadeInUp">Por Que Escolher STIHL?</h2>
+                <p class="section-subtitle-premium wow fadeInUp" data-wow-delay="0.2s">Excelência comprovada em cada equipamento</p>
+            </div>
+
+            <div class="row gap-25">
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="benefit-premium wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="benefit-icon-premium">
+                            <span class="iccon-zap-1"></span>
+                        </div>
+                        <h3 class="benefit-title-premium text-center">Potência Superior</h3>
+                        <p class="benefit-text-premium text-center">Motores de alta performance que garantem eficiência máxima em qualquer trabalho, seja leve ou pesado.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="benefit-premium wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="benefit-icon-premium">
+                            <span class="iccon-shield-1"></span>
+                        </div>
+                        <h3 class="benefit-title-premium text-center">Durabilidade Garantida</h3>
+                        <p class="benefit-text-premium text-center">Construção robusta com materiais premium que resistem às condições mais extremas de uso profissional.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="benefit-premium wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="benefit-icon-premium">
+                            <span class="iccon-heart-1"></span>
+                        </div>
+                        <h3 class="benefit-title-premium text-center">Tecnologia Limpa</h3>
+                        <p class="benefit-text-premium text-center">Sistemas ecológicos que reduzem emissões e consumo de combustível, protegendo o meio ambiente.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="benefit-premium wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="benefit-icon-premium">
+                            <span class="iccon-settings-1"></span>
+                        </div>
+                        <h3 class="benefit-title-premium text-center">Ergonomia Perfeita</h3>
+                        <p class="benefit-text-premium text-center">Design inteligente que reduz fadiga e aumenta produtividade com conforto excepcional durante todo o dia.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="benefit-premium wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="benefit-icon-premium">
+                            <span class="iccon-headphones-1"></span>
+                        </div>
+                        <h3 class="benefit-title-premium text-center">Suporte Total</h3>
+                        <p class="benefit-text-premium text-center">Rede de assistência técnica especializada e peças originais disponíveis em todo o Brasil.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="benefit-premium wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="benefit-icon-premium">
+                            <span class="iccon-star-1"></span>
+                        </div>
+                        <h3 class="benefit-title-premium text-center">Qualidade Alemã</h3>
+                        <p class="benefit-text-premium text-center">Engenharia de precisão reconhecida mundialmente há quase um século de inovação e excelência.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Premium -->
+    <section id="produtos" class="section-premium">
+        <div class="container">
+            <div class="text-center m-80px-b xs-m-50px-b">
+                <h2 class="section-title-premium wow fadeInUp">Nossos Produtos em Destaque</h2>
+                <p class="section-subtitle-premium wow fadeInUp" data-wow-delay="0.2s">Equipamentos profissionais para cada necessidade</p>
+            </div>
+
+            <div class="row gap-30">
+                <!-- Produto 1 -->
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="product-premium wow zoomIn" data-wow-delay="0.1s">
+                        <img src="https://images.unsplash.com/photo-1625210932615-34498f900a6f?w=800&q=80" alt="Motosserra MS 261 C-M" class="product-image-premium">
+                        <div class="product-content-premium">
+                            <div class="product-category-premium">Motosserras</div>
+                            <h3 class="product-title-premium">MS 261 C-M</h3>
+                            <p class="product-description-premium">Motosserra profissional com tecnologia M-Tronic para cortes precisos em madeira dura.</p>
+                            <div class="product-price-premium">R$ 3.890</div>
+                            <a href="#" class="btn-buy-premium" data-modal-show="produto-modal-1">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="product-premium wow zoomIn" data-wow-delay="0.2s">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Soprador BR 600 MAGNUM" class="product-image-premium">
+                        <div class="product-content-premium">
+                            <div class="product-category-premium">Sopradores</div>
+                            <h3 class="product-title-premium">BR 600 MAGNUM</h3>
+                            <p class="product-description-premium">Soprador de alta potência para limpeza de grandes áreas com facilidade extrema.</p>
+                            <div class="product-price-premium">R$ 2.590</div>
+                            <a href="#" class="btn-buy-premium" data-modal-show="produto-modal-2">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="product-premium wow zoomIn" data-wow-delay="0.3s">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="Roçadeira FS 131 R" class="product-image-premium">
+                        <div class="product-content-premium">
+                            <div class="product-category-premium">Aparadores</div>
+                            <h3 class="product-title-premium">FS 131 R</h3>
+                            <p class="product-description-premium">Roçadeira versátil e potente para trabalhos em terrenos difíceis e vegetação densa.</p>
+                            <div class="product-price-premium">R$ 2.190</div>
+                            <a href="#" class="btn-buy-premium" data-modal-show="produto-modal-3">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="product-premium wow zoomIn" data-wow-delay="0.4s">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80" alt="Tesoura HSA 66" class="product-image-premium">
+                        <div class="product-content-premium">
+                            <div class="product-category-premium">Tesouras</div>
+                            <h3 class="product-title-premium">HSA 66</h3>
+                            <p class="product-description-premium">Tesoura de cerca-viva a bateria silenciosa e eficiente para acabamento perfeito.</p>
+                            <div class="product-price-premium">R$ 1.490</div>
+                            <a href="#" class="btn-buy-premium" data-modal-show="produto-modal-4">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="product-premium wow zoomIn" data-wow-delay="0.5s">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80" alt="Lavadora RE 130 PLUS" class="product-image-premium">
+                        <div class="product-content-premium">
+                            <div class="product-category-premium">Lavadoras</div>
+                            <h3 class="product-title-premium">RE 130 PLUS</h3>
+                            <p class="product-description-premium">Lavadora de alta pressão compacta e poderosa para limpeza profissional rápida.</p>
+                            <div class="product-price-premium">R$ 1.890</div>
+                            <a href="#" class="btn-buy-premium" data-modal-show="produto-modal-5">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="c-xs-12 c-sm-6 c-md-4">
+                    <div class="product-premium wow zoomIn" data-wow-delay="0.6s">
+                        <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800&q=80" alt="Bateria AP 300 S" class="product-image-premium">
+                        <div class="product-content-premium">
+                            <div class="product-category-premium">Baterias</div>
+                            <h3 class="product-title-premium">AP 300 S</h3>
+                            <p class="product-description-premium">Bateria de lítio de alta capacidade para uso prolongado sem interrupções no trabalho.</p>
+                            <div class="product-price-premium">R$ 990</div>
+                            <a href="#" class="btn-buy-premium" data-modal-show="produto-modal-6">Comprar Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Premium -->
+    <section id="depoimentos" class="testimonials-premium section-premium ps-relative">
+        <div class="container ps-relative" style="z-index: 2;">
+            <div class="text-center m-80px-b xs-m-50px-b">
+                <h2 class="section-title-premium wow fadeInUp" style="color: var(--stihl-white);">O Que Dizem Nossos Clientes</h2>
+                <p class="section-subtitle-premium wow fadeInUp" data-wow-delay="0.2s" style="color: rgba(255,255,255,0.7);">Profissionais que confiam na STIHL</p>
+            </div>
+
+            <div class="slide__viewport">
+                <div class="slide__row cursor-grab gap-25">
+                    <div class="slide__item c-xs-12 c-md-4">
+                        <div class="testimonial-premium">
+                            <p class="testimonial-text-premium">"Uso equipamentos STIHL há mais de 15 anos e nunca me decepcionaram. A durabilidade e potência são incomparáveis no mercado!"</p>
+                            <div class="testimonial-author-premium">Carlos Mendes</div>
+                            <div class="testimonial-position-premium">Paisagista Profissional</div>
+                        </div>
+                    </div>
+
+                    <div class="slide__item c-xs-12 c-md-4">
+                        <div class="testimonial-premium">
+                            <p class="testimonial-text-premium">"Minha empresa só trabalha com STIHL. A produtividade aumentou 40% e a manutenção é mínima. Investimento que vale cada centavo!"</p>
+                            <div class="testimonial-author-premium">Ana Paula Silva</div>
+                            <div class="testimonial-position-premium">Diretora de Jardinagem</div>
+                        </div>
+                    </div>
+
+                    <div class="slide__item c-xs-12 c-md-4">
+                        <div class="testimonial-premium">
+                            <p class="testimonial-text-premium">"A tecnologia dos equipamentos STIHL facilita muito o trabalho pesado. Conforto e eficiência que fazem toda a diferença no dia a dia."</p>
+                            <div class="testimonial-author-premium">Roberto Oliveira</div>
+                            <div class="testimonial-position-premium">Engenheiro Florestal</div>
+                        </div>
+                    </div>
+
+                    <div class="slide__item c-xs-12 c-md-4">
+                        <div class="testimonial-premium">
+                            <p class="testimonial-text-premium">"Atendimento excepcional e produtos de qualidade superior. A STIHL é sinônimo de confiança e profissionalismo absoluto."</p>
+                            <div class="testimonial-author-premium">Mariana Costa</div>
+                            <div class="testimonial-position-premium">Proprietária de Viveiro</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Premium -->
+    <section id="contato" class="cta-premium section-premium ps-relative">
+        <div class="container ps-relative" style="z-index: 2;">
+            <div class="text-center wow zoomIn">
+                <h2 class="section-title-premium m-30px-b" style="color: var(--stihl-white);">Pronto Para Turbinar Seu Trabalho?</h2>
+                <p class="section-subtitle-premium m-50px-b" style="color: rgba(255,255,255,0.8);">Entre em contato conosco e descubra o equipamento perfeito para você</p>
+                <div class="d-flex f-justify-center f-gap-20 f-wrap">
+                    <a href="tel:08000000000" class="btn-premium-primary">
+                        <span class="iccon-phone-1"></span>
+                        <span>0800 000 0000</span>
+                    </a>
+                    <a href="mailto:contato@stihl.com.br" class="btn-premium-secondary">
+                        <span class="iccon-mail-1"></span>
+                        <span>contato@stihl.com.br</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="footer-premium p-80px-tb xs-p-50px-tb">
+        <div class="container">
+            <div class="row m-50px-b gap-20">
+                <div class="c-xs-12 c-md-4">
+                    <div class="logo-premium m-25px-b">STIHL</div>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 15px;">
+                        Líder mundial em motosserras e equipamentos motorizados para jardinagem, silvicultura e construção.
+                    </p>
+                    <div class="m-30px-t d-flex f-gap-15">
+                        <a href="#" class="social-premium"><span class="iccon-facebook-1"></span></a>
+                        <a href="#" class="social-premium"><span class="iccon-instagram-1"></span></a>
+                        <a href="#" class="social-premium"><span class="iccon-youtube-1"></span></a>
+                        <a href="#" class="social-premium"><span class="iccon-linkedin-1"></span></a>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-2">
+                    <div class="footer-title-premium">Links Rápidos</div>
+                    <a href="#inicio" class="footer-link-premium">Início</a>
+                    <a href="#beneficios" class="footer-link-premium">Benefícios</a>
+                    <a href="#produtos" class="footer-link-premium">Produtos</a>
+                    <a href="#depoimentos" class="footer-link-premium">Depoimentos</a>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-3">
+                    <div class="footer-title-premium">Produtos</div>
+                    <a href="#" class="footer-link-premium">Motosserras</a>
+                    <a href="#" class="footer-link-premium">Sopradores</a>
+                    <a href="#" class="footer-link-premium">Aparadores</a>
+                    <a href="#" class="footer-link-premium">Lavadoras</a>
+                    <a href="#" class="footer-link-premium">Acessórios</a>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-md-3">
+                    <div class="footer-title-premium">Contato</div>
+                    <a href="tel:08000000000" class="footer-link-premium">
+                        <span class="iccon-phone-1"></span> 0800 000 0000
+                    </a>
+                    <a href="mailto:contato@stihl.com.br" class="footer-link-premium">
+                        <span class="iccon-mail-1"></span> contato@stihl.com.br
+                    </a>
+                    <a href="#" class="footer-link-premium">
+                        <span class="iccon-map-pin-1"></span> São Paulo, SP - Brasil
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t p-30px-t text-center" style="border-color: var(--stihl-gray) !important;">
+                <p style="color: rgba(255,255,255,0.5); font-size: 14px;">
+                    © 2024 STIHL. Todos os direitos reservados. | Política de Privacidade | Termos de Uso
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Menu Mobile -->
+    <div data-modal="menu-modal" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-max-400px">
+                <button class="dialog-close" data-modal-hide>&times;</button>
+                <div class="modal-premium border-rd-20 p-40px-all">
+                    <h3 class="fs-12 fw-800 m-30px-b">Menu</h3>
+                    <nav class="d-flex f-col f-gap-20">
+                        <a href="#inicio" class="nav-premium" style="color: var(--stihl-black);" data-modal-hide>Início</a>
+                        <a href="#beneficios" class="nav-premium" style="color: var(--stihl-black);" data-modal-hide>Benefícios</a>
+                        <a href="#produtos" class="nav-premium" style="color: var(--stihl-black);" data-modal-hide>Produtos</a>
+                        <a href="#depoimentos" class="nav-premium" style="color: var(--stihl-black);" data-modal-hide>Depoimentos</a>
+                        <a href="#contato" class="nav-premium" style="color: var(--stihl-black);" data-modal-hide>Contato</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais de Produtos (simplificados) -->
+    <div data-modal="produto-modal-1" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-max-700px">
+                <button class="dialog-close" data-modal-hide>&times;</button>
+                <div class="modal-premium border-rd-20 p-50px-all">
+                    <h3 class="fs-13 fw-900 m-15px-b">MS 261 C-M</h3>
+                    <div class="product-category-premium m-25px-b">Motosserras Profissionais</div>
+                    <div class="product-price-premium m-30px-b">R$ 3.890</div>
+                    <div class="m-30px-b">
+                        <h4 class="fw-700 fs-9 m-20px-b">Especificações:</h4>
+                        <ul style="line-height: 2; color: var(--stihl-gray-medium); font-size: 15px;">
+                            <li>Motor: 50,2 cm³ - 2,4 kW</li>
+                            <li>Peso: 4,9 kg (sem combustível)</li>
+                            <li>Comprimento de corte: 37 cm</li>
+                            <li>Tecnologia M-Tronic para ajuste automático</li>
+                            <li>Sistema anti-vibração avançado</li>
+                            <li>Bomba de óleo regulável</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-buy-premium">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais 2-6 seguem o mesmo padrão -->
+    <div data-modal="produto-modal-2" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-max-700px">
+                <button class="dialog-close" data-modal-hide>&times;</button>
+                <div class="modal-premium border-rd-20 p-50px-all">
+                    <h3 class="fs-13 fw-900 m-15px-b">BR 600 MAGNUM</h3>
+                    <div class="product-category-premium m-25px-b">Sopradores de Alta Potência</div>
+                    <div class="product-price-premium m-30px-b">R$ 2.590</div>
+                    <a href="#" class="btn-buy-premium">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-modal="produto-modal-3" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-max-700px">
+                <button class="dialog-close" data-modal-hide>&times;</button>
+                <div class="modal-premium border-rd-20 p-50px-all">
+                    <h3 class="fs-13 fw-900 m-15px-b">FS 131 R</h3>
+                    <div class="product-category-premium m-25px-b">Roçadeiras Profissionais</div>
+                    <div class="product-price-premium m-30px-b">R$ 2.190</div>
+                    <a href="#" class="btn-buy-premium">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-modal="produto-modal-4" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-max-700px">
+                <button class="dialog-close" data-modal-hide>&times;</button>
+                <div class="modal-premium border-rd-20 p-50px-all">
+                    <h3 class="fs-13 fw-900 m-15px-b">HSA 66</h3>
+                    <div class="product-category-premium m-25px-b">Tesouras de Cerca-viva</div>
+                    <div class="product-price-premium m-30px-b">R$ 1.490</div>
+                    <a href="#" class="btn-buy-premium">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-modal="produto-modal-5" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-max-700px">
+                <button class="dialog-close" data-modal-hide>&times;</button>
+                <div class="modal-premium border-rd-20 p-50px-all">
+                    <h3 class="fs-13 fw-900 m-15px-b">RE 130 PLUS</h3>
+                    <div class="product-category-premium m-25px-b">Lavadoras de Alta Pressão</div>
+                    <div class="product-price-premium m-30px-b">R$ 1.890</div>
+                    <a href="#" class="btn-buy-premium">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-modal="produto-modal-6" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-max-700px">
+                <button class="dialog-close" data-modal-hide>&times;</button>
+                <div class="modal-premium border-rd-20 p-50px-all">
+                    <h3 class="fs-13 fw-900 m-15px-b">AP 300 S</h3>
+                    <div class="product-category-premium m-25px-b">Baterias Profissionais</div>
+                    <div class="product-price-premium m-30px-b">R$ 990</div>
+                    <a href="#" class="btn-buy-premium">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Squeleton JavaScript (Footer) -->
+    <script src="https://cdn.hiperwp.com.br/squeleton-scripts.v4.min.js"></script>
+
+    <script>
+        // Inicializar WOW.js
+        new WOW().init();
+
+        // Inicializar Embla Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const emblaNode = document.querySelector('.slide__viewport');
+            if (emblaNode) {
+                const embla = EmblaCarousel(emblaNode, {
+                    loop: true,
+                    dragFree: false,
+                    containScroll: 'trimSnaps',
+                    align: 'start'
+                });
+
+                setInterval(() => embla.scrollNext(), 5000);
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const increment = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 1);
+                        } else {
+                            counter.innerText = target.toLocaleString('pt-BR');
+                        }
+                    };
+
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => observer.observe(counter));
+    </script>
+</body>
+</html>
+
